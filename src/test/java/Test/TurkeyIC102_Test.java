@@ -16,6 +16,7 @@ public class TurkeyIC102_Test extends Base {
         super.beforemethod();
         super.loginmethod();
     }
+
     @Test (priority = 1)
     public void APL_Daily_Success() throws InterruptedException{
         LeftMenu leftmenu = new LeftMenu(driver);
@@ -27,7 +28,7 @@ public class TurkeyIC102_Test extends Base {
             Actions actions = new Actions(driver);
             actions.moveToElement(leftmenu.IC102()).click().build().perform();
             Thread.sleep(2000);
-            System.out.println(iclines.title20().getText()+ " Daily");
+            System.out.println(iclines.title().getText()+ " Daily");
             Thread.sleep(2000);
             actions.moveToElement(iclines.TabAPL()).click().build().perform();
 
@@ -70,7 +71,7 @@ public class TurkeyIC102_Test extends Base {
             Actions actions = new Actions(driver);
             actions.moveToElement(leftmenu.IC102()).click().build().perform();
             Thread.sleep(2000);
-            System.out.println(iclines.title20().getText()+ " Daily");
+            System.out.println(iclines.title().getText()+ " Daily");
             Thread.sleep(2000);
             actions.moveToElement(iclines.TabASL()).click().build().perform();
 
@@ -113,7 +114,7 @@ public class TurkeyIC102_Test extends Base {
             Actions actions = new Actions(driver);
             actions.moveToElement(leftmenu.IC102()).click().build().perform();
             Thread.sleep(2000);
-            System.out.println(iclines.title20().getText()+ " Daily");
+            System.out.println(iclines.title().getText()+ " Daily");
             Thread.sleep(2000);
             actions.moveToElement(iclines.TabIML()).click().build().perform();
 
@@ -156,7 +157,7 @@ public class TurkeyIC102_Test extends Base {
             Actions actions = new Actions(driver);
             actions.moveToElement(leftmenu.IC102()).click().build().perform();
             Thread.sleep(2000);
-            System.out.println(iclines.title20().getText()+ " Daily");
+            System.out.println(iclines.title().getText()+ " Daily");
             Thread.sleep(2000);
             actions.moveToElement(iclines.TabCOL()).click().build().perform();
 
@@ -188,13 +189,14 @@ public class TurkeyIC102_Test extends Base {
             Assert.fail("fail");
         }
     }
+
     @Test (priority = 5)
     public void APL_Weekly_Success() throws InterruptedException{
         LeftMenu leftmenu = new LeftMenu(driver);
         ICLines iclines = new ICLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(iclines.title20().getText() + " Weekly");
+            System.out.println(iclines.title().getText() + " Weekly");
             Thread.sleep(2000);
             iclines.PeriodFilter().click();
             Thread.sleep(2000);
@@ -237,7 +239,7 @@ public class TurkeyIC102_Test extends Base {
         ICLines iclines = new ICLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(iclines.title20().getText() + " Weekly");
+            System.out.println(iclines.title().getText() + " Weekly");
             Thread.sleep(2000);
             iclines.PeriodFilter().click();
             Thread.sleep(2000);
@@ -280,7 +282,7 @@ public class TurkeyIC102_Test extends Base {
         ICLines iclines = new ICLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(iclines.title20().getText() + " Weekly");
+            System.out.println(iclines.title().getText() + " Weekly");
             Thread.sleep(2000);
             iclines.PeriodFilter().click();
             Thread.sleep(2000);
@@ -323,7 +325,7 @@ public class TurkeyIC102_Test extends Base {
         ICLines iclines = new ICLines(driver);
         Thread.sleep(2000);
         try {
-            System.out.println(iclines.title20().getText() + " Weekly");
+            System.out.println(iclines.title().getText() + " Weekly");
             Thread.sleep(2000);
             iclines.PeriodFilter().click();
             Thread.sleep(2000);
@@ -360,6 +362,7 @@ public class TurkeyIC102_Test extends Base {
             Assert.fail("fail");
         }
     }
+
     @AfterTest
     public void aftertest(){
         super.aftermethod();

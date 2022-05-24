@@ -12,8 +12,8 @@ public class ICLines {
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
     }
-    By title20 = By.xpath("//h2[contains(text(),'TURKEY')]");
-    public WebElement title20() {return  driver.findElement(title20);}
+    By title = By.xpath("//h2[contains(text(),'TURKEY')]");
+    public WebElement title() {return  driver.findElement(title);}
 
     By tabAPL = By.linkText("APL");
     public WebElement TabAPL() {return driver.findElement(tabAPL);}
